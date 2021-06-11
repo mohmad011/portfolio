@@ -1,0 +1,27 @@
+/***************************** Navbar ****************************************/
+.bg-custom{
+	background-color: #000000!important;
+}
+
+.logo{
+    width: 4.25rem;
+    height: 2.25rem;
+}
+
+/***************************** Menu Links ****************************************/
+
+nav{
+	z-index: 2;
+}
+
+nav .nav-link{
+	letter-spacing: 0.0375rem;
+	cursor: pointer;
+	transition: color 0.5s;
+}
+
+nav .nav-link:hover{
+	color: #d39e00 !important;
+	border-top: 0.0375rem solid #d39e00;
+	border-width:80%;
+}
