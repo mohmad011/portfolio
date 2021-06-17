@@ -29,6 +29,7 @@ const HomePage = () => {
 	    	}} 
 	    />
 		<div className="home">
+			<div className="home__overLay"></div>
 			<div className="home__info d-flex flex-column justify-content-center align-items-center text-center">
 				<h1 className="text-uppercase">I'm Mohmad Gamal</h1>
 				<Typed
