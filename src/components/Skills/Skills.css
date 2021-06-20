@@ -1,0 +1,176 @@
+::selection {
+  background-color: #eece1a;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  font-size: 6rem;
+}
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(73, 73, 73, 0.5);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-sec {
+  color: #9e9e9e;
+}
+
+.skills{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.lg-heading{
+  color: #795548;
+  font-size: calc(3.5em + 3.5vw);
+  text-shadow: 0px 0px 10px black;
+}
+
+.sm-heading{
+  color: #9e9e9e;
+  font-size: calc(.9em + .9vw);
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  margin-top: 2rem;
+}
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 20vh;
+}
+
+.skills-container {
+  display: flex;
+  grid-gap: 0.7rem;
+  justify-content: center;
+}
+
+.skills-container .item {
+  display: flex;
+  flex: 1 1 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  height: 60px;
+  font-size: calc(.8em + .8vw);
+  font-style: italic;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animShining 5s linear infinite;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:rgba(255,255,255,.1);
+}
+
+#main-footer span{
+  font-weight: bold;
+  color: #9e9e9e;
+}
+
+
+@media screen and (min-width: 1171px) {
+  .skills-container {
+    /*grid-template-columns: repeat(4, 1fr);*/
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .skills-container {
+    /*grid-template-columns: repeat(3, 1fr);*/
+  }
+  main {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
+    margin-top: 10vh;
+  }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+  }
+skills-containerprojects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 325px) {
+
+  #main-footer{
+    font-size: calc(.7em + .7vw);
+  }
+
+}
+
+@keyframes animShining
+{
+  0%
+  {
+    background-position: -500%;
+  }
+  100%
+  {
+    background-position: 500%;
+  }
+
+}
+
+.progress-bar{
+	background-color: transparent;
+	width:250px !important;
+}
+
+.progress-bar h3{
+	color: #f44336;
+    text-shadow: 0 0 10px #ff5722;
+}
+
+.progress-bar-circ-container{
+	margin: 0 auto;
+
+}
