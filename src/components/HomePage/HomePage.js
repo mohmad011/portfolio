@@ -1,15 +1,14 @@
-import React from "react";
+import React, {useMemo} from "react";
 import "./HomePage.css";
-import { Link, withRouter } from "react-router-dom";
 import Typed from "react-typed";
 import Particles from 'react-particles-js';
 
 // data-aos
 const HomePage = () => {
 
-  return (
-  	<>
-		<Particles 
+  const MyParticles = useMemo(() => (
+
+		<Particles
 	        params={{
 	            particles: {
 	            	number: {
@@ -29,6 +28,12 @@ const HomePage = () => {
 	            }
 	    	}} 
 	    />
+
+  	) , [Particles])
+
+  return (
+  	<>
+  		{MyParticles}
 		<div className="home">
 			<div  className="home__overLay"></div>
 			<div  className="home__info d-flex flex-column justify-content-center align-items-center text-center">

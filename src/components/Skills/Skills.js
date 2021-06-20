@@ -1,8 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import { Link, withRouter } from "react-router-dom";
 import ProgressBar from 'react-animated-progress-bar';
-import Tech from "./tec.jpg"
 const Skills = () => {
 
   const allSkills = [
@@ -53,13 +51,13 @@ const Skills = () => {
 							          fontColor="white"
 							          trackWidth="10"
 							          percentage={item.perc}
-							          trackPathColor="black"
-							          trackBorderColor="black"
+							          trackPathColor="#9e9e9e"
+							          trackBorderColor="#fff"
 							          hollowBackgroundColor="#333333"
 							          defColor={{
 							            fair: 'orangered',
 							            good: 'yellow',
-							            excellent: '#4caf50',
+							            excellent: 'green',
 							            poor: 'red',
 							          }}
 							          
