@@ -1,4 +1,10 @@
 /***************************** Home Page ****************************************/
+
+::selection {
+  background-color: #ff9800;
+  color: #fff;
+}
+
 .home{
 	position: relative;
 	background:url('./imgs/main.jpg');

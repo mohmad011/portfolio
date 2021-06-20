@@ -1,7 +1,10 @@
 import React from "react";
 import "./About.css";
 import ImgMo from "./mohmad.jpg"
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+// data-aos="fade-right"
+ // data-aos="fade-left"
 const About = () => {
 
   return (

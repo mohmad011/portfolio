@@ -4,6 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 import Typed from "react-typed";
 import Particles from 'react-particles-js';
 
+// data-aos
 const HomePage = () => {
 
   return (
@@ -29,8 +30,8 @@ const HomePage = () => {
 	    	}} 
 	    />
 		<div className="home">
-			<div className="home__overLay"></div>
-			<div className="home__info d-flex flex-column justify-content-center align-items-center text-center">
+			<div  className="home__overLay"></div>
+			<div  className="home__info d-flex flex-column justify-content-center align-items-center text-center">
 				<h1 className="text-uppercase">I'm Mohmad Gamal</h1>
 				<Typed
 					className="home__typed-text"

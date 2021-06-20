@@ -17,3 +17,8 @@ code {
 body{
   background-color: #08001b;
 }
+
+::selection {
+  background-color: #ff9800;
+  color: #fff;
+}

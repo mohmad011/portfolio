@@ -1,4 +1,10 @@
 /***************************** Navbar ****************************************/
+
+::selection {
+  background-color: #ff9800;
+  color: #fff;
+}
+
 .bg-custom{
 	background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
