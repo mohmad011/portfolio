@@ -66,12 +66,6 @@ main .icons a:hover {
   color: #eece1a;
   transition: all 0.5s ease-out;
 }
-main#home {
-  overflow: hidden;
-}
-main#home h1 {
-  margin-top: 20vh;
-}
 
 .projects {
   background-color: #000;
@@ -115,7 +109,6 @@ main#home h1 {
   -webkit-box-reflect: below 2px linear-gradient(transparent,transparent,#0006);
 }
 
-
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -140,19 +133,15 @@ main#home h1 {
   color: #000;
 }
 
-
-.btn,
-.btn-dark,
-.btn-light {
+:is(.btn , .btn-dark , .btn-light){ /* == .btn, .btn-dark, .btn-light ==> css grouping*/
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
   font-size: calc(.5em + .5vw);
 }
-.btn:hover,
-.btn-dark:hover,
-.btn-light:hover {
+
+:is(.btn , .btn-dark , .btn-light):hover{ /* == .btn:hover, .btn-dark:hover, .btn-light:hover*/
   background: #eece1a;
   color: #000;
   text-decoration: none;
@@ -192,9 +181,7 @@ main#home h1 {
 
 @media screen and (min-width: 2000px) {
 
-  .btn,
-  .btn-dark,
-  .btn-light {
+:is(.btn , .btn-dark , .btn-light) {
     font-size: calc(.8em + .8vw);
   }
 
@@ -223,9 +210,7 @@ main#home h1 {
     margin-bottom: 1rem;
   }
 
-  .btn,
-  .btn-dark,
-  .btn-light {
+:is(.btn , .btn-dark , .btn-light) {
     font-size: calc(.8em + .8vw);
   }
 
