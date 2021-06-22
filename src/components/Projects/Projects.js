@@ -1,4 +1,15 @@
-import React, {useMemo} from "react";
+import React, {useMemo , useState} from "react";
+import SwiperCore, { Navigation, Pagination, EffectCoverflow , Autoplay } from 'swiper';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/effect-coverflow/effect-coverflow.scss';
+
 import "./Projects.css";
 import amazon from "./imgs/amazon.jpg"
 import tiktok from "./imgs/tiktok.png"
@@ -14,6 +25,10 @@ import Elite from "./imgs/slide1.jpg"
 import Prototypes from "./imgs/landing7.png"
 import Home from "./imgs/home.jpg"
 import Tech from "./imgs/tec.jpg"
+
+
+// install Swiper modules
+SwiperCore.use([EffectCoverflow , Autoplay]);
 
 const Projects = () => {
 
@@ -33,10 +48,11 @@ const Projects = () => {
 		{id:13,img:useMemo(() => Home , [Home]),linkLive:"https://mohmad012.github.io/Real-Estate-Site/",linkGithub:"https://github.com/Mohmad012/Real-Estate-Site",name:"Home Design Site",frontBack:false},
 		{id:14,img:useMemo(() => Tech , [Tech]),linkLive:"https://mohmad012.github.io/bootstrap3-1/",linkGithub:"https://github.com/Mohmad012/bootstrap3-1",name:"Tech Site",frontBack:false},
 	]
+
   return (
 	<div className="work">
 		<main id="work">
-		    <h1 className="lg-heading">
+		    <h1  className="text-uppercase lg-heading">
 		      My
 		      <span className="text-sec">Work</span>
 		    </h1>
@@ -45,9 +61,29 @@ const Projects = () => {
 		      Check out some of my projects...
 		    </h2>
 
-			<div className="projects">
+			<Swiper
+				className="projects"
+				effect='coverflow'
+				spaceBetween={50}
+				slidesPerView={1}
+				grabCursor={true}
+				centeredSlides={true}
+				slidesPerView={'auto'}
+				coverflowEffect={{
+					rotate: 20,
+					stretch: 0,
+					depth: 200,
+					modifier: 1,
+					slideShadows: true,
+				}}
+				pagination={{ clickable: true }}
+				scrollbar={{ draggable: true }}
+				loop={true}
+				autoplay={{ delay: 3000, disableOnInteraction: false }}
+
+			>
 				{allData ? allData.map((item) => (
-			      <div className="item" key={item.id}>
+			      <SwiperSlide className="item" key={item.id}>
 			        <a className="views" href={item.linkLive} rel="noreferrer" target="_blank">
 			          <img src={item.img} alt={item.name} />
 			        </a>
@@ -74,10 +110,11 @@ const Projects = () => {
 				        </a>
 					)}
 
-			      </div>
+			      </SwiperSlide>
 				)) : <p>Loading...</p>}
 
-			</div>
+			</Swiper>
+
 		</main>
 		<footer id="main-footer">
 		Copyright &copy; 2021 Updated By <span> Mohmad Gamal </span>

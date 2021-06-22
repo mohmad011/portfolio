@@ -31,7 +31,7 @@ const Skills = () => {
 	<div className="skills">
 
 		<main id="skills">
-		    <h1 className="lg-heading">
+		    <h1 className="text-uppercase lg-heading">
 		      My
 		      <span className="text-sec">Skills</span>
 		    </h1>
