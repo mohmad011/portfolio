@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "./Skills.scss";
 import ProgressBar from 'react-animated-progress-bar';
 const Skills = () => {
 

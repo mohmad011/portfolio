@@ -1,5 +1,5 @@
 import React, {useMemo} from "react";
-import "./HomePage.css";
+import "./HomePage.scss";
 import Typed from "react-typed";
 import Particles from 'react-particles-js';
 

@@ -1,0 +1,135 @@
+@mixin animateHead {
+  @keyframes animateHead
+  {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+      color: #474e04;
+      text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+      color: #fff;
+      text-shadow:  0 0 10px #ffc107,
+                    0 0 20px #ffc107,
+                    0 0 40px #ffc107,
+                    0 0 80px #ffc107,
+                    0 0 100px #ffc107;
+    }
+
+  }
+}
+
+@mixin animShining {
+  @keyframes animShining
+  {
+    0%
+    {
+      background-position: -500%;
+    }
+    100%
+    {
+      background-position: 500%;
+    }
+
+  }
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, black, 30%)) {
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin mainFooter {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  height: 60px;
+  font-size: calc(.8em + .8vw);
+  font-style: italic;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animShining 7s linear infinite;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:rgba(255,255,255,.1);
+}
+
+@mixin smHeading {
+  color: #9e9e9e;
+  margin-top: 7rem;
+  border-radius: 5px;
+  background-color: #2d1d06;
+  box-shadow: 0 0 10px #ff9800;
+  text-shadow:0 0 10px #ffe500;
+}
+
+@mixin lgHeading {
+  position: relative;
+  width: 100%;
+  -webkit-box-reflect:below 1px linear-gradient(transparent,90%, #ffc107);
+  outline: none;
+  animation: animateHead 5s linear infinite;
+}
+
+@mixin backgroundPage {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+@mixin mainPage {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  margin-top: 2rem;
+}
+
+@mixin globSelcPage {
+
+  ::selection {
+    background-color: #eece1a;
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem;
+  }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5);
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .text-sec {
+    color: #9e9e9e;
+  }
+}

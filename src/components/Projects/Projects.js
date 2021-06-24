@@ -10,7 +10,7 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 
-import "./Projects.css";
+import "./Projects.scss";
 import amazon from "./imgs/amazon.jpg"
 import tiktok from "./imgs/tiktok.png"
 import tinder from "./imgs/tinder.png"
@@ -93,12 +93,12 @@ const Projects = () => {
 
 
 					{item.frontBack && (
-						<div class="item_Git">
-						    <a href={item.backGithub} rel="noreferrer" target="_blank" class="btn-dark">
-						      <i class="fab fa-github"></i> Backend
+						<div className="item_Git">
+						    <a href={item.backGithub} rel="noreferrer" target="_blank" className="btn-dark">
+						      <i className="fab fa-github"></i> Backend
 						    </a>
-						    <a href={item.frontGithub} rel="noreferrer" target="_blank" class="btn-dark">
-						      <i class="fab fa-github"></i> Frontend
+						    <a href={item.frontGithub} rel="noreferrer" target="_blank" className="btn-dark">
+						      <i className="fab fa-github"></i> Frontend
 						    </a>
 						</div>
 

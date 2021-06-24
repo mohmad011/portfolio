@@ -1,0 +1,236 @@
+@import "../mixins";
+
+::selection {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.BxContact{
+  @include backgroundPage;
+
+  #BxContact{
+	    @include mainPage;
+	    position: relative;
+	    @media screen and (min-width: 769px) and (max-width: 1170px) {
+
+	      & {
+	        align-items: center;
+	      }
+	    }
+
+	    @media screen and (max-width: 768px) {
+	      & {
+	        align-items: center;
+	      }
+	    }
+
+	    @media screen and (max-width: 576px) {
+	      & {
+	        padding: 2rem;
+	      }
+	    }
+
+	    .lg-heading{
+	      @include lgHeading;
+
+	      @media screen and (max-width: 768px) {
+	        & {
+	          line-height: 1;
+	          margin-bottom: 1rem;
+	        }
+	      }
+
+	      @media screen and (max-width: 576px) {
+	        & {
+	          margin-top: 1rem;
+	          font-size: 2.5rem;
+	        }
+	      }
+
+	      @media screen and (max-width: 300px) {
+	        & {
+	          margin-top: 1rem;
+	          font-size: 2rem;
+	        }
+	      }
+
+	      span{
+	        color:#474e04;
+	      }
+	    }
+
+	    .sm-heading{
+	      @include smHeading;
+
+	      @media screen and (max-width: 576px) {
+
+	        & {
+	          margin-top: 4rem;
+	          font-size: calc(.6em + .6vw);
+	        }
+
+	      }
+	    }
+
+		.contuctForm{
+			width: 100%;
+			background-color: #100b02;
+			padding-top: 50px;
+			padding-bottom: 200px;
+			box-shadow: 0 0 10px #ff9800;
+			border-radius: 10px;
+			.form-row{
+
+				label{
+					color: #ffc107;
+					font-size: calc(.8em + .8vw);
+				    text-shadow: 0 0 10px #ffc107;
+				    font-weight: bold;
+				}
+
+				.form-control{
+					background-color: transparent !important;
+					box-shadow: none;
+					border:none;
+					outline:none;
+					border-bottom:1px solid #ffc107;
+					border-radius: 0;
+					color:#fff;
+
+					&.is-invalid{
+						outline:1px solid #e91e63;
+						border-bottom:none;
+					}
+
+					&.is-valid{
+						outline:1px solid #009688;
+						border-bottom:none;
+					}
+				}
+
+				.valid-feedback,
+				.invalid-feedback{
+					font-size: calc(.6em + .6vw);
+				}
+			}
+		}
+
+		.success-snd{
+		    width: 70%;
+		    margin: 0 auto;
+		    text-align: center;
+		    background-color: #343a40;
+		    z-index: -1;
+		    position: fixed;
+		    top: 50%;
+		    left: -100%;
+		    padding: 20px;
+		    margin: 0 auto;
+		    border-radius: 10px;
+		    transition: all .5s;
+		    &.show{
+			    left: 15%;
+			    z-index: 1;
+		    }
+
+		    &.hide{
+			    left: 100%;
+			    z-index: -1;
+		    }
+
+			h3{
+				font-size: calc(.8em + 0.8vw);
+				color: #28a74f;
+				font-weight: bold;
+			}
+		}
+
+	}
+
+	.social-footer{
+				text-align: center;
+				background-color:#262626;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+
+		  ul{
+		  	display: flex;
+		  	justify-content: center;
+		  	list-style: none;
+	  	    padding-top: 15px;
+		  	li{
+		  		position: relative;
+		  		display: block;
+		  		color: #666;
+		  		height: 50px;
+		  		width: 50px;
+		  		background-color: #171515;
+		  		line-height: 55px;
+		  		border-radius: 50%;
+		  		margin:0 15px;
+		  		cursor: pointer;
+		  		transition: .5s;
+
+				@media screen and (min-width: 2000px) {
+					& {
+						height: 70px;
+						width: 70px;
+						line-height: 88px;
+					}
+				}
+
+		  		i{
+		  			font-size: calc(.8em + .8vw);
+					@media screen and (max-width: 768px) {
+						& {
+						  font-size: calc(1em + 1vw);
+						}
+					}
+
+		  		}
+		  		&:nth-child(1){
+					&:hover{
+						box-shadow: 0 0 20px #4267b2;
+						&{
+				  			i{
+				  				color: #4267b2;
+				  				text-shadow: 0 0 20px #4267b2;
+				  			}
+						}					
+					}
+		  		}
+
+		  		&:nth-child(2){
+					&:hover{
+						box-shadow: 0 0 20px #000;
+
+						&{
+				  			i{
+				  				color: #000;
+				  				text-shadow: 0 0 20px #000;
+				  			}
+						}
+					}
+		  		}
+
+		  		&:nth-child(3){
+
+					&:hover{
+						box-shadow: 0 0 20px #2867b2;
+
+						&{
+				  			i{
+				  				color: #2867b2;
+				  				text-shadow: 0 0 20px #2867b2;
+				  			}
+						}
+					}
+
+		  		}
+
+		  	}
+		  }
+	}
+}

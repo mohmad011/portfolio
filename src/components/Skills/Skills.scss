@@ -1,0 +1,150 @@
+@import "../mixins";
+
+@include globSelcPage;
+
+.skills{
+  @include backgroundPage;
+
+  #skills {
+    @include mainPage;
+
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+
+      & {
+        align-items: center;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        align-items: center;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      & {
+        padding: 2rem;
+      }
+    }
+
+    .lg-heading{
+      @include lgHeading;
+
+      @media screen and (max-width: 768px) {
+        & {
+          line-height: 1;
+          margin-bottom: 1rem;
+        }
+        .skills-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+      }
+
+      @media screen and (max-width: 576px) {
+
+        & {
+          margin-top: 1rem;
+          font-size: 2.7rem;
+        }
+      }
+
+      span{
+        color:#474e04;
+      }
+    }
+
+    .sm-heading{
+      @include smHeading;
+
+      @media screen and (max-width: 767px) {
+
+        & {
+          margin-top: 4rem;
+        }
+
+      }
+
+      @media screen and (max-width: 576px) {
+
+        & {
+          margin-top: 4rem;
+          font-size: calc(.6em + .6vw);
+        }
+      }
+
+    }
+
+    .skills-container {
+      display: flex;
+      grid-gap: 0.7rem;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+
+        & {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+      }
+
+      .item {
+        display: flex;
+        flex: 1 1 20%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+#main-footer {
+  @include mainFooter;
+
+  @media screen and (max-width: 325px) {
+
+    &{
+      font-size: calc(.7em + .7vw);
+    }
+
+  }
+
+  span{
+    font-weight: bold;
+    color: #9e9e9e;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills-containerprojects {
+    grid-template-columns: 1fr;
+  }
+}
+
+.progress-bar{
+	background-color: transparent;
+	width:250px !important;
+}
+
+.progress-bar h3{
+	color: #ffc107;
+    text-shadow: 0 0 10px #ffc107;
+    font-weight: bold;
+}
+
+.progress-bar-circ-container{
+	margin: 0 auto;
+
+}
+
+
+@include animShining;
+
+@include animateHead;
+
+@include scrollbars(.5em, #ffc107);
