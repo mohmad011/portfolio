@@ -53,7 +53,7 @@ const Skills = () => {
 							          percentage={item.perc}
 							          trackPathColor="#9e9e9e"
 							          trackBorderColor="#fff"
-							          hollowBackgroundColor="#333333"
+							          hollowBackgroundColor="#212529b0"
 							          defColor={{
 							            fair: 'orangered',
 							            good: 'yellow',

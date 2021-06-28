@@ -10,7 +10,7 @@ import Contuct from "./components/Contuct/Contuct"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/NEW_Portfolio">
       	<Nav />
 		<Switch>
 			<Route path="/" exact component={HomePage} />

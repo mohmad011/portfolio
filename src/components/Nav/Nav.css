@@ -20,9 +20,20 @@ nav{
 	z-index: 2;
 }
 
-nav .container{
+
+.container{
 	margin: 0 auto !important;
 }
+
+/*
+
+nav .navbar-brand.active{
+	color: #d39e00 !important;
+	border-top: 0.0375rem solid #d39e00;
+	border-width:80%;
+}
+
+*/
 
 nav .nav-link{
 	letter-spacing: 0.0375rem;
@@ -30,6 +41,12 @@ nav .nav-link{
 	transition: color 0.5s;
 	font-size: calc(.7em + .5vw);
 	border-top: 0.0375rem solid transparent;
+}
+
+nav .nav-link.active{
+	color: #d39e00 !important;
+	border-top: 0.0375rem solid #d39e00;
+	border-width:80%;
 }
 
 nav .nav-link:hover{
